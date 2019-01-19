@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Js</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <input type="text" class="form-control" placeholder="Dogru Sayısı giriniz" [(ngModel)]="txtDogruSayisi" /> <br/>
+                <input type="text" class="form-control" placeholder=" Yanlış Sayısı giriniz" [(ngModel)]="txtYanlisSayisi" /> <br/>
+            </div>
+            {{txtDogruSayisi-(txtYanlisSayisi/4)}}
+        </div>
+
+        <h1> {{message}} </h1>
+
+        <ul class="list-group" >
+            <li class="list-group-item" (click)="calistir()"  *ngFor="#veriler of veri" > {{veriler}} </li>
+        </ul>
+
+    </div>
+</body>
+</html>
